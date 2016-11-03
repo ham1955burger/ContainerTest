@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aSM-pl-8i9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="MainViewController" customModule="IGListKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jgi-X1-YKg">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="77" id="fwW-DN-Ic8" customClass="MainTableViewCell" customModule="IGListKitTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fwW-DN-Ic8" id="U1h-Uc-v8K">
+                                            <frame key="frameInset" width="375" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="2oC-LH-DqU">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="6cc-XF-mod"/>
+                                                        <constraint firstAttribute="width" constant="60" id="cSQ-pI-OCU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nicname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19a-VE-Esy">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="19a-VE-Esy" firstAttribute="leading" secondItem="2oC-LH-DqU" secondAttribute="trailing" constant="10" id="KJ7-zx-XhG"/>
+                                                <constraint firstAttribute="topMargin" secondItem="2oC-LH-DqU" secondAttribute="top" id="dqT-09-5D9"/>
+                                                <constraint firstItem="19a-VE-Esy" firstAttribute="centerY" secondItem="U1h-Uc-v8K" secondAttribute="centerY" id="hpH-Av-blN"/>
+                                                <constraint firstItem="2oC-LH-DqU" firstAttribute="leading" secondItem="U1h-Uc-v8K" secondAttribute="leadingMargin" id="kCQ-YK-7eX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userImageView" destination="2oC-LH-DqU" id="0nl-Ya-f1n"/>
+                                            <outlet property="userNicknameLabel" destination="19a-VE-Esy" id="Z3c-Tu-e1p"/>
+                                            <segue destination="enG-YI-74r" kind="show" id="hG7-FU-mYN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jxf-bg-bPG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="j3L-i2-weh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jgi-X1-YKg" secondAttribute="bottom" id="FNo-VH-E90"/>
+                            <constraint firstAttribute="trailing" secondItem="jgi-X1-YKg" secondAttribute="trailing" id="h8X-8U-3oA"/>
+                            <constraint firstItem="jgi-X1-YKg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vv6-QM-znj"/>
+                            <constraint firstItem="jgi-X1-YKg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zPP-h5-h6b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main" id="Jjh-gR-PXt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="138.98050974512745"/>
+        </scene>
+        <!--Sub View Controller-->
+        <scene sceneID="4Mw-3k-aWx">
+            <objects>
+                <viewController id="enG-YI-74r" customClass="SubViewController" customModule="IGListKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5dm-r0-YgK"/>
+                        <viewControllerLayoutGuide type="bottom" id="qoV-Vz-vDe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iXb-O0-pIS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="2hy-sV-00Q">
+                                <frame key="frameInset" minX="142" minY="93" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFb-cM-B0H">
+                                <frame key="frameInset" minY="233" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="actionContainerButtons:" destination="enG-YI-74r" eventType="touchUpInside" id="6sK-0O-nA7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-qq-VaB">
+                                <frame key="frameInset" minX="164" minY="233" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="actionContainerButtons:" destination="enG-YI-74r" eventType="touchUpInside" id="6AX-wE-d9r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfG-tM-bSc">
+                                <frame key="frameInset" minX="329" minY="233" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="actionContainerButtons:" destination="enG-YI-74r" eventType="touchUpInside" id="rsm-qT-Wlw"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CmT-Bw-qqJ">
+                                <frame key="frameInset" height="390"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="OoJ-IN-ZJY" kind="embed" identifier="sub_to_container" id="gCv-51-RWD"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="containerButtons" destination="RFb-cM-B0H" collectionClass="NSMutableArray" id="PTN-yC-2JX"/>
+                        <outletCollection property="containerButtons" destination="OtY-qq-VaB" collectionClass="NSMutableArray" id="R0p-GV-3n1"/>
+                        <outletCollection property="containerButtons" destination="XfG-tM-bSc" collectionClass="NSMutableArray" id="c5L-Iw-1Df"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rgd-vm-2FG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664.8" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6sx-6E-YaR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aSM-pl-8i9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EUz-Jx-wds">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dyd-OT-0Jv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30z-Pn-GK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="wcR-pN-6pl">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="S8o-g2-2YF" customClass="FirstViewController" customModule="IGListKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zry-xX-syj"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Q4-yD-68n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LIA-rP-CpA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="933-jg-Zfx" customClass="IGListCollectionView">
+                                <frame key="frameInset" width="375" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CGh-vq-dMg">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FMX-QE-wL0">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="390"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Hr-Mg-5Xu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="1220"/>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="OPP-vL-Prj">
+            <objects>
+                <viewController storyboardIdentifier="ContainerViewController" id="OoJ-IN-ZJY" customClass="ContainerViewController" customModule="IGListKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Clm-rN-SaX"/>
+                        <viewControllerLayoutGuide type="bottom" id="L4y-CD-AN8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fTG-Ym-dOw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="S8o-g2-2YF" kind="custom" identifier="container_to_first" customClass="CustomSegue" customModule="IGListKitTest" customModuleProvider="target" id="0U9-8N-gTe"/>
+                        <segue destination="RYl-Jq-C9e" kind="custom" identifier="container_to_second" customClass="CustomSegue" customModule="IGListKitTest" customModuleProvider="target" id="z1i-79-Va9"/>
+                        <segue destination="2ul-sL-6ON" kind="custom" identifier="container_to_third" customClass="CustomSegue" customModule="IGListKitTest" customModuleProvider="target" id="cqw-9b-tfs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XhP-vx-jjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="713"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="eVy-yF-Ss9">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="RYl-Jq-C9e" customClass="SecondViewController" customModule="IGListKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VnI-QU-NDy"/>
+                        <viewControllerLayoutGuide type="bottom" id="MQo-M5-ncb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MCR-Sj-atf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="390"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6V-C8-0hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="1220"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="ibl-Me-qNF">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="2ul-sL-6ON" customClass="ThirdViewController" customModule="IGListKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ULF-za-lSv"/>
+                        <viewControllerLayoutGuide type="bottom" id="IZi-dn-zdb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xsa-BL-gKs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="390"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Byj-Hk-UXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2385" y="1220"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple" width="420" height="288"/>
+    </resources>
+</document>
